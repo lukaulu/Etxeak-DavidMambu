@@ -1,1 +1,7 @@
-<p>etxe-txartela works!</p>
+<div>
+    <p>{{etxea().name}}</p>
+    <img [src]="etxea().photo" [alt]="etxea().name"/>
+    <p>{{etxea().city}}</p>
+    <p>{{etxea().state}}</p>
+    <p [routerLink]="['/xehetasuna', etxea().id]">Gehiago jakin</p>
+</div>
