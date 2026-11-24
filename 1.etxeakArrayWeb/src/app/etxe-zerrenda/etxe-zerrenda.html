@@ -1,1 +1,7 @@
-<p>etxe-zerrenda works!</p>
+<section class="zerrenda-sareta">
+    @for (etxea of etxeak(); track etxea.id) {
+        <app-etxe-txartela [etxea]="etxea" />
+    }@empty {
+        <p>Ez da etxerik aurkitu</p>
+    }
+</section>

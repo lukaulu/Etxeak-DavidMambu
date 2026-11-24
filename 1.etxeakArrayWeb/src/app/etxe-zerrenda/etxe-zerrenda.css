@@ -1,0 +1,20 @@
+.zerrenda-sareta {
+  display: grid;
+  grid-template-columns: 1fr; /* Pantaila txikietan: zutabe bakarra */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Tablet tamainan (640px-tik gora): 2 zutabe */
+@media (min-width: 640px) {
+  .zerrenda-sareta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ordenagailu pantailan (1024px-tik gora): 3 zutabe */
+@media (min-width: 1024px) {
+  .zerrenda-sareta {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

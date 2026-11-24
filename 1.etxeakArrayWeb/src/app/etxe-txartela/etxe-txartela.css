@@ -1,0 +1,38 @@
+.txartela {
+  background-color: #f4f6f9;
+  border-radius: 16px;
+  overflow: hidden; /* Para que la imagen respete las esquinas redondeadas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.txartela:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+.txartela-argazkia {
+  width: 100%;
+  height: 230px; /* Altura fija para que todas las tarjetas queden igualadas */
+  object-fit: cover; /* Recorta la foto sin estirarla */
+  display: block;
+}
+
+.txartela-edukia {
+  padding: 1.2rem;
+}
+
+.txartela-izenburua {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.txartela-kokapena {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
