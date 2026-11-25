@@ -1,0 +1,9 @@
+<section class="bilatzaile-kutxa">
+    <input type="text" 
+    placeholder="BilatuHiria..."
+    #iragazkia
+    [value]="bilaketaService.hiriBilatuta()"/>
+    <input type="button"
+    value="Bilatu"
+    (click)="bilaketaService.hiriEguneratu(iragazkia.value)">
+</section>

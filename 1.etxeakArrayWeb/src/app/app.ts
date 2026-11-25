@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
+import { Bilatzailea } from './bilatzailea/bilatzailea';
 
 @Component({
-  imports: [RouterOutlet, RouterLinkWithHref],
+  imports: [RouterOutlet, RouterLinkWithHref, Bilatzailea],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

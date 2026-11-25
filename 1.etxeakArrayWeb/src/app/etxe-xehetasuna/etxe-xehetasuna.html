@@ -1,6 +1,13 @@
-<section class="datuak">
+@if (etxea(); as e) {
+  <section class="datuak">
     <img class="xehetasun-argazkia" [src]="etxea()?.photo" />
-    <p></p>
-    
-
+    <p>{{etxea()?.name}}</p>
+    <p>{{etxea()?.city}}</p>
+    <p>{{etxea()?.state}}</p>
+    <p>{{etxea()?.availableUnits}}</p>
+    <p>{{etxea()?.wifi | true}}</p>
+    <p>{{etxea()?.laundry | true}}</p>
 </section>
+} @else {
+  <p>Ez da etxe hori aurkitu.</p>
+}
