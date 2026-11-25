@@ -12,6 +12,7 @@ import { Etxeak } from '../etxeak';
 
 export class EtxeXehetasuna {
   private etxeakZerbitzua = inject(Etxeak);
+  
   id = input.required<string>();
   etxea = computed(() => this.etxeakZerbitzua.bat(this.id()));
 
