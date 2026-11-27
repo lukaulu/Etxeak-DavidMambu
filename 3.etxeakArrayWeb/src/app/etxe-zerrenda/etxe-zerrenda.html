@@ -1,0 +1,14 @@
+<app-bilatzailea />
+@if (kargatzen()) {
+    <p>Kargatzen…</p>
+} @else if (errorea()) {
+    <p class="errorea">{{ errorea() }}</p>
+} @else {
+    <section class="zerrenda-sareta">
+        @for (etxea of etxeFiltratuak(); track etxea.id) {
+            <app-etxe-txartela [etxea]="etxea" />
+        }@empty {
+            <p>Ez da etxerik aurkitu</p>
+        }
+    </section>
+}

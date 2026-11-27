@@ -1,0 +1,11 @@
+<section class="txartela">
+    <img class="txartela-argazkia" [src]="etxea().photo" [alt]="etxea().name"/>
+    <div class="txartela-edukia">
+        <h2 class="txartela-izenburua">{{ etxea().name }}</h2>
+        <p class="txartela-kokapena">📍 {{ etxea().city }}, {{ etxea().state }}</p>
+        <a [routerLink]="['/etxea', etxea().id]" class="ikusi-botoia">Ikusi gehiago</a>
+
+    </div>
+</section>
+
+

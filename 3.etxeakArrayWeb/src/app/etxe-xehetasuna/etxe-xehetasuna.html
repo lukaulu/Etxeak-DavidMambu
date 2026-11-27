@@ -1,0 +1,43 @@
+@if (kargatzen()) {
+  <p>Kargatzen…</p>
+} @else if (errorea()) {
+  <p class="errorea">{{ errorea() }}</p>
+} @else if (etxea(); as e) {
+  <section class="datuak">
+    <img class="xehetasun-argazkia" [src]="e.photo" [alt]="e.name" />
+    <p>{{ e.name }}</p>
+    <p>{{ e.city }}</p>
+    <p>{{ e.state }}</p>
+    <p>{{ e.availableUnits }}</p>
+    <p>{{ e.wifi | true }}</p>
+    <p>{{ e.laundry | true }}</p>
+  </section>
+
+  <section class="formularioa">
+    <h2>Interesdun naiz</h2>
+    <form #f="ngForm" (ngSubmit)="bidali()">
+      <label for="izena">Izena</label>
+      <input id="izena" name="izena" type="text" required [(ngModel)]="izena" />
+
+      <label for="abizena">Abizena</label>
+      <input id="abizena" name="abizena" type="text" required [(ngModel)]="abizena" />
+
+      <label for="emaila">Emaila</label>
+      <input id="emaila" name="emaila" type="email" required email
+             pattern="[^@\s]+@[^@\s]+\.[^@\s]+" [(ngModel)]="emaila" />
+
+      <button type="submit" [disabled]="f.invalid">Bidali</button>
+    </form>
+  </section>
+
+  <section class="interesdunak">
+    <h2>Interesdunak</h2>
+    @for (i of interesdunak(); track $index) {
+      <p>{{ i.izena }} {{ i.abizena }} — {{ i.emaila }}</p>
+    } @empty {
+      <p>Oraindik ez dago interesdunik etxe honetarako.</p>
+    }
+  </section>
+} @else {
+  <p>Ez da etxe hori aurkitu.</p>
+}
